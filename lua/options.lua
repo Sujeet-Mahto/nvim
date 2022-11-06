@@ -1,0 +1,32 @@
+local o = vim.opt
+local fn = vim.fn
+
+vim.cmd[[colorscheme dracula]]
+o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50" -- block in normal and beam cursor in insert mode jskajfklajlskdjfalksdjfk
+o.updatetime = 300 -- faster completion
+o.timeoutlen = 400 -- time to wait for a mapped sequence to complete (in milliseconds)
+o.ttimeoutlen = 0 -- Time in milliseconds to wait for a key code sequence to complete
+o.backup = false -- creates a backup file
+o.swapfile = true -- enable/disable swap file creation
+o.dir = fn.stdpath("data") .. "/swp" -- swap file directory
+o.history = 500 -- Use the 'history' option to set the number of lines from command mode that are remembered.
+o.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
+o.fileencoding = "utf-8" -- the encoding written to a file
+o.conceallevel = 0 -- so that `` is visible in markdown files
+o.number = true
+o.relativenumber = true
+o.showmode = false -- we don't need to see things like -- INSERT -- anymore
+o.smartcase = true -- smart case
+o.smartindent = true -- make indenting smarter again
+o.expandtab = true -- convert tabs to spaces
+o.shiftwidth = 2 -- the number of spaces inserted for each indentation
+o.tabstop = 2 -- how many columns a tab counts for
+o.termguicolors = true -- set term gui colors (most terminals support this)
+o.cursorline = true -- highlight the current line
+o.scrolloff = 3 -- Minimal number of screen lines to keep above and below the cursor
+o.sidescrolloff = 5 -- The minimal number of columns to scroll horizontally
+o.hlsearch = true -- highlight all matches on previous search pattern
+o.ignorecase = true -- ignore case in search patterns
+o.foldenable = false -- disable folding; TODO: wait for https://github.com/neovim/neovim/pull/17446
+o.foldcolumn = "1"
+o.foldlevelstart = 99 -- Using ufo provider need a large value, feel free to decrease the value
